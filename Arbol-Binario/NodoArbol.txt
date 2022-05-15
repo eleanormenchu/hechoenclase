@@ -1,0 +1,40 @@
+
+class NodoArbol {
+
+    
+    NodoArbol nodoizquierdo;
+    String datos;
+    NodoArbol nododerecho;
+
+    
+    public NodoArbol(String datosNodo)
+    {
+        datos = datosNodo;
+        nodoizquierdo = nododerecho = null; //el nodo no tiene hijos
+    }
+
+    
+    public synchronized void insertar(String valorInsertar)
+    {
+        
+        if (valorInsertar.length() <= datos.length()){
+
+            
+            if (nodoizquierdo == null)
+                nodoizquierdo = new NodoArbol(valorInsertar);
+            else //continua recorriendo subarbol izquierdo
+                nodoizquierdo.insertar(valorInsertar);
+        }
+
+        
+        else if(valorInsertar.length() > datos.length()){
+
+            
+            if (nododerecho == null)
+                nododerecho = new NodoArbol(valorInsertar);
+            else //continua recorriendo subarbol derecho
+                nododerecho.insertar(valorInsertar);
+        }
+    } 
+
+}

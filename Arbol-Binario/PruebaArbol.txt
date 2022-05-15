@@ -1,0 +1,34 @@
+
+public class PruebaArbol {
+    public static void main(String args[])
+    {
+        Arbol arbol = new Arbol();
+       
+
+        System.out.println( "Insertando los siguientes valores:"+
+        "camino, abedul, estruendo, noche, dia, espejo, roca, dirimir,"+
+        "ambulancia, hiperrealidad, amigo");
+
+        arbol.insertarNodo("camino");
+        arbol.insertarNodo("abedul");
+        arbol.insertarNodo("estruendo");
+        arbol.insertarNodo("noche");
+        arbol.insertarNodo("dia");
+        arbol.insertarNodo("espejo");
+        arbol.insertarNodo("roca");
+        arbol.insertarNodo("dirimir");
+        arbol.insertarNodo("ambulancia");
+        arbol.insertarNodo("hiperrealidad");
+        arbol.insertarNodo("amigo");
+
+
+        System.out.println("\n\nRecorrido preorden");
+        arbol.recorridoPreorden();
+
+        System.out.println("\n\nRecorrido inorden");
+        arbol.recorridoInorden();
+
+        System.out.println("\n\nRecorrido posorden");
+        arbol.recorridoPosorden();
+    }
+}
